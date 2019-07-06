@@ -41,7 +41,7 @@ public class OcrService {
         Map<String,Object> params=new HashMap<>();
         params.put("card_type",card_type);
         params.put("image",image);
-        Map<String, Object> map = SignUtil.getSign(params, null);
+        Map<String, Object> map = SignUtil.getSign(account,params, null);
         String data = HttpUtil.post(OcrUrl.idcardUrl, map);
         return data;
     }
@@ -60,7 +60,7 @@ public class OcrService {
         Map<String,Object> params=new HashMap<>();
         params.put("type",type);
         params.put("image",image);
-        Map<String, Object> map = SignUtil.getSign(params, null);
+        Map<String, Object> map = SignUtil.getSign(account,params, null);
         String data = HttpUtil.post(OcrUrl.driverUrl, map);
         return data;
     }
@@ -73,7 +73,7 @@ public class OcrService {
         String image = Base64.encode(inputStream);
         Map<String,Object> params=new HashMap<>();
         params.put("image",image);
-        Map<String, Object> map = SignUtil.getSign(params, null);
+        Map<String, Object> map = SignUtil.getSign(account,params, null);
         String data = HttpUtil.post(OcrUrl.generalUrl, map);
         return data;
     }
@@ -86,7 +86,7 @@ public class OcrService {
         String image = Base64.encode(inputStream);
         Map<String,Object> params=new HashMap<>();
         params.put("image",image);
-        Map<String, Object> map = SignUtil.getSign(params, null);
+        Map<String, Object> map = SignUtil.getSign(account,params, null);
         String data = HttpUtil.post(OcrUrl.bizUrl, map);
         return data;
     }
@@ -99,7 +99,7 @@ public class OcrService {
         String image = Base64.encode(inputStream);
         Map<String,Object> params=new HashMap<>();
         params.put("image",image);
-        Map<String, Object> map = SignUtil.getSign(params, null);
+        Map<String, Object> map = SignUtil.getSign(account,params, null);
         String data = HttpUtil.post(OcrUrl.creditcardUrl, map);
         return data;
     }
@@ -112,7 +112,7 @@ public class OcrService {
         String image = Base64.encode(inputStream);
         Map<String,Object> params=new HashMap<>();
         params.put("image",image);
-        Map<String, Object> map = SignUtil.getSign(params, null);
+        Map<String, Object> map = SignUtil.getSign(account,params, null);
         String data = HttpUtil.post(OcrUrl.handwritingUrl, map);
         return data;
     }
@@ -125,7 +125,7 @@ public class OcrService {
         String image = Base64.encode(inputStream);
         Map<String,Object> params=new HashMap<>();
         params.put("image",image);
-        Map<String, Object> map = SignUtil.getSign(params, null);
+        Map<String, Object> map = SignUtil.getSign(account,params, null);
         String data = HttpUtil.post(OcrUrl.plateUrl, map);
         return data;
     }
@@ -138,7 +138,7 @@ public class OcrService {
         String image = Base64.encode(inputStream);
         Map<String,Object> params=new HashMap<>();
         params.put("image",image);
-        Map<String, Object> map = SignUtil.getSign(params, null);
+        Map<String, Object> map = SignUtil.getSign(account,params, null);
         String data = HttpUtil.post(OcrUrl.bcUrl, map);
         return data;
     }

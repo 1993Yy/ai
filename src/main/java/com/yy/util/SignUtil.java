@@ -19,16 +19,13 @@ import java.util.TreeMap;
 
 public class SignUtil {
 
-    public static Map<String,Object> getSign(Map<String, Object> params, String charset){
+    public static Map<String,Object> getSign(Account account,Map<String, Object> params, String charset){
         final String charset1;
         if (Objects.isNull(charset)){
             charset1="UTF-8";
         }else {
             charset1=charset;
         }
-        Account account=new Account();
-        account.setAppId(2118147806);
-        account.setAppKey("AssxqFKVramn45g5");
         Map<String,Object> param=new TreeMap<>(params);
         param.put("app_id",account.getAppId());
         param.put("time_stamp", DateUtil.currentSeconds());
