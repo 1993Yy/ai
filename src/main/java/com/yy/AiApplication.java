@@ -19,6 +19,7 @@ public class AiApplication {
 	Account account;
 
 	@GetMapping("/")
-	public void test(){
+	public String test(){
+		return "hello";
 	}
 }
