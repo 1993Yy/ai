@@ -1,14 +1,12 @@
 package com.yy.ocr;
 
 import cn.hutool.core.codec.Base64;
-import cn.hutool.core.io.FileUtil;
 import cn.hutool.http.HttpUtil;
 import com.yy.entity.Account;
 import com.yy.util.SignUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashMap;
